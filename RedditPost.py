@@ -20,4 +20,7 @@ class RedditPost(Webpage):
     def screenShotTitle(self, fileName):
         element = self.driver.find_element_by_xpath(self.titleXPATH)
         self.screenShotOfElement(element, fileName)
-    
+
+    def getCommentsElements(self):
+        xpath = "//div[@id='AppRouter-main-content']/div[@tabindex='-1']/div/div[2]/div[5]/div/div/div"
+        self.driver.find_elements_by_xpath(xpath)
