@@ -4,10 +4,31 @@ from xml.dom.minidom import Element
 from selenium import webdriver
 
 def getTopOfTodayLinks(subreddit):
-    base =  f"https://www.reddit.com/r/{subreddit}"
-    extention = "/top/?t=day"
-    link = base + extention
+    extention = "top/?t=day"
+    return getFromReddit(getTopOfHelper(subreddit, extention))
 
+def getTopOfWeekLinks(subreddit):
+    extention = "top/?t=week"
+    return getFromReddit(getTopOfHelper(subreddit, extention))
+
+def getTopOfMonthLinks(subreddit):
+    extention = "top/?t=month"
+    return getFromReddit(getTopOfHelper(subreddit, extention))
+
+def getTopOfYearLinks(subreddit):
+    extention = "top/?t=year"
+    return getFromReddit(getTopOfHelper(subreddit, extention))
+
+def getTopOfAllTimeLinks(subreddit):
+    extention = "top/?t=all"
+    return getFromReddit(getTopOfHelper(subreddit, extention))
+
+def getTopOfHelper(subreddit, extention):
+    base =  f"https://www.reddit.com/r/{subreddit}/"
+    link = base + extention
+    return link
+
+def getFromReddit(link):
     driver = webdriver.Chrome()
     driver.get(link)
 
@@ -20,4 +41,6 @@ def getTopOfTodayLinks(subreddit):
 
     return postLinks
 
-links = getTopOfTodayLinks("AmItheAsshole")
+links = getTopOfAllTimeLinks("AmItheAsshole")
+for l in links:
+    print(l)
