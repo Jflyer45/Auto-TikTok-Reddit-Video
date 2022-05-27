@@ -40,7 +40,3 @@ def getFromReddit(link):
         postLinks.append(""+a.get_attribute("href"))
 
     return postLinks
-
-links = getTopOfAllTimeLinks("AmItheAsshole")
-for l in links:
-    print(l)

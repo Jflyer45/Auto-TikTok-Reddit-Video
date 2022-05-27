@@ -1,15 +1,15 @@
-import imp
 from turtle import pos
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from RedditPost import RedditPost
-import io; from PIL import Image; 
+from moviepy.editor import *
+from Picture import Picture
+from Manager import Manager
 
-driver = webdriver.Chrome()
-driver.get("https://www.reddit.com/r/AmItheAsshole/comments/uvwzoj/aita_for_disinviting_my_siblings_from_my_wedding/")
+m = Manager()
+link = "https://www.reddit.com/r/AmItheAsshole/comments/awyi8k/aita_for_despising_my_mentally_handicap_sister/"
+m.createTikTok(link)
 
-post = RedditPost(driver)
-print(post.getParagraphs())
-post.screenShotTitle("Jeremy")
 
-driver.close()
+#TODO sanaitize the text for text to speech, AITA -> Am i the asshole
+#TODO add ability to read comments
