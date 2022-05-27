@@ -17,6 +17,7 @@ class Manager:
         self.texts = []
         self.backgroundVideoPATH = os.getcwd() +  "\\Background_videos"
         self.finalVideosPATH = os.getcwd() +  "\\Final_Videos"
+        self.errorCount = 0
 
     # This gets the texts and images
     def getRedditStory(self, link):
@@ -37,6 +38,7 @@ class Manager:
         imagePaths.append("Title.png")
         for i in range(1, len(texts)):
             imagePaths.append(f"Paragraph{i}.png")
+            self.ImagePaths.append(f"Paragraph{i}.png")
             i += 1
         return texts, imagePaths
 
@@ -58,6 +60,7 @@ class Manager:
             page.typeText(text)
             fileName = f"audio{i}.mp3"
             audioPaths.append(fileName)
+            self.audioPaths.append(fileName)
             page.clickDownload(fileName)
             page.clearText()
             i += 1
@@ -115,17 +118,21 @@ class Manager:
 
 
     def createTikTok(self, link):
-        print("Getting screenshots and texts")
-        texts, imagePaths = self.getRedditStory(link)
-        
-        print("Collecting Audios...")
-        audioPaths = self.textToSpeech(texts)
+        try:
+            print("Getting screenshots and texts")
+            texts, imagePaths = self.getRedditStory(link)
+            
+            print("Collecting Audios...")
+            audioPaths = self.textToSpeech(texts)
 
-        print("Creating video")
-        self.createVideo(imagePaths, audioPaths, texts[0])
+            print("Creating video")
+            self.createVideo(imagePaths, audioPaths, texts[0])
 
-        print("Cleaning up")
-        self.cleanUp(imagePaths, audioPaths)
+            print("Cleaning up")
+            self.cleanUp(imagePaths, audioPaths)
+        except:
+            self.errorCount += 1
+            self.cleanUp(self.ImagePaths, self.audioPaths)
 
     ### Helper Methods ###
     def choseRandomFileFromFolder(self, folderPath):
@@ -140,15 +147,24 @@ class Manager:
         for clip in clips:
             clip.close()
 
+    def removeFile(self, filePath):
+        if os.path.exists(filePath):
+            os.remove(filePath)
+        else:
+            print(f"FAILED TO DELETE: {filePath}, DID NOT EXSIST")
+            self.errorCount += 1
+
     def cleanUp(self, imagesPaths, audioPaths):
-        os.remove("combinedAudio.mp3")
-        os.remove("Award.png")
-        os.remove("Upvotes.png")
+        self.removeFile("combinedAudio.mp3")
+        self.removeFile("Award.png")
+        self.removeFile("Upvotes.png")
+        self.removeFile(os.path.expanduser("~") + "\\Downloads\\narration.mp3")
         for path in imagesPaths:
-            os.remove(path)
+            self.removeFile(path)
         for path in audioPaths:
-            print(f"Trying to remove {path}")
-            os.remove(path)
+            self.removeFile(path)
+        self.ImagePaths = []
+        self.audioPaths = []
 
     def get_concat_h(self, im1, im2):
         im2 = im2.resize((im2.width, im1.height))

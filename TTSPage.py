@@ -33,7 +33,7 @@ class TTSPage:
     #     ele.click()
     #     sleep(1)
 
-    def clickDownload(self, fileName):
+    def clickDownload(self, fileName, timeout=10):
         xpath = "//i[contains(text(), 'file_download')]"
         ele = self.driver.find_element_by_xpath(xpath)
         ele.click()
@@ -41,9 +41,15 @@ class TTSPage:
         home = os.path.expanduser('~')
         path = os.path.join(home, 'Downloads')
         latest_file = os.path.join(path, "narration.mp3")
+
+        time = 0
+        while not os.path.exists(latest_file):
+            if time > timeout:
+                raise Exception(f"Issue with finding narration file that was going to be named: {fileName}")
+            sleep(1)
+
         new_file = os.path.join(path, fileName)
         print(latest_file)
-        #prints a.txt which was latest file i created
         os.rename(latest_file, new_file)
         shutil.move(new_file, os.getcwd())
         sleep(1)
