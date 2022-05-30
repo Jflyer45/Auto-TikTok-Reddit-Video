@@ -81,6 +81,8 @@ class Manager:
         new_audioclip = CompositeAudioClip([audioclip])
         videoclip.audio = new_audioclip
         print(new_audioclip.duration)
+        audioclip.close()
+        new_audioclip.close()
 
         # Resize image
         for path in imagePaths:
