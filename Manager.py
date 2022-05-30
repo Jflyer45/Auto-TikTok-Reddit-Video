@@ -9,6 +9,7 @@ from moviepy.editor import *
 from Picture import Picture
 from sanitize_filename import sanitize
 from PIL import Image
+from webdriver_manager.chrome import ChromeDriverManager
 
 class Manager:
     def __init__(self):  
@@ -19,10 +20,20 @@ class Manager:
         self.finalVideosPATH = os.getcwd() +  "\\Final_Videos"
         self.errorCount = 0
 
+    def getHeadlessDriver(self):
+        options = webdriver.ChromeOptions()
+        options.add_argument("headless")
+        return webdriver.Chrome(executable_path= ChromeDriverManager().install(), chrome_options=options)
+
+    def getHeadlessDriverFireFox(self):
+        opts = webdriver.FirefoxOptions()
+        opts.headless = True
+        return webdriver.Firefox(options=opts)
+
     # This gets the texts and images
     def getRedditStory(self, link):
         #TODO move images to image folder
-        driver = webdriver.Chrome()
+        driver = self.getHeadlessDriverFireFox()
         driver.get(link)
 
         post = RedditPost(driver)
@@ -135,7 +146,8 @@ class Manager:
             print("Cleaning up")
             self.cleanUp(imagePaths, audioPaths)
             return True
-        except:
+        except Exception as e:
+            print(e)
             self.errorCount += 1
             self.cleanUp(self.ImagePaths, self.audioPaths)
             return False

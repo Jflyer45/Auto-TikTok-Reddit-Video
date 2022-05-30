@@ -4,6 +4,7 @@ from time import sleep
 from xml.dom.minidom import Element
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
 
 class Level:
     def __init__(self):
@@ -45,7 +46,7 @@ def pageDown(driver, times):
         sleep(.5)
 
 def getFromReddit(link, amount=Level().Default):
-    driver = webdriver.Chrome()
+    driver = getHeadlessDriver()
     driver.get(link)
     pageDown(driver, amount)
     # gets the a tag
@@ -56,3 +57,8 @@ def getFromReddit(link, amount=Level().Default):
         postLinks.append(""+a.get_attribute("href"))
 
     return postLinks
+
+def getHeadlessDriver():
+        options = webdriver.ChromeOptions()
+        options.add_argument("headless")
+        return webdriver.Chrome(executable_path= ChromeDriverManager().install(), chrome_options=options)

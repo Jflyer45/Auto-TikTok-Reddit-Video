@@ -35,27 +35,46 @@ def deleteFromFile(file, item):
 def isFileEmpty(file):
     return os.path.getsize(file) == 0
 
-subreddit = "AmItheAsshole"
-linkStorage = f"{subreddit}_Stories.txt"
+def addToDoneVideos(link):
+    links = fileToList("doneVideos.txt")
+    links.append(link)
+    listToFile(links, "doneVideos.txt")
 
-if not os.path.exists(linkStorage):
-    links = getTopOfTodayLinks(subreddit)
-    listToFile(links, linkStorage)
-else:
-    if isFileEmpty(linkStorage):
-        os.remove(linkStorage)
-        links = getTopOfTodayLinks(subreddit, Level().Default)
-        listToFile(links, linkStorage)
-    else:
-        links = fileToList(linkStorage)
+def removeDoneLinks(links):
+    doneLinks = fileToList("doneVideos.txt")
+    finalList = []
+    for link in links:
+        if link not in doneLinks:
+            finalList.append(link)
+    return finalList
 
-m = Manager()
-for link in links:
-    print(f"Now creating video for: {link}")
-    didWork = m.createTikTok(link)
-    if didWork:
-        deleteFromFile(linkStorage, link)
-print(f"During the operation there were: {m.errorCount} deletion problems")
+Manager().createTikTok("https://www.reddit.com/r/TrueOffMyChest/comments/v0kq5j/my_sister_is_going_to_tell_our_parents_shes/")
+
+
+# subreddit = "TrueOffMyChest"
+# linkStorage = f"{subreddit}_Stories.txt"
+
+# if not os.path.exists(linkStorage):
+#     links = getTopOfTodayLinks(subreddit)
+#     links = removeDoneLinks(links)
+#     listToFile(links, linkStorage)
+# else:
+#     if isFileEmpty(linkStorage):
+#         os.remove(linkStorage)
+#         links = getTopOfTodayLinks(subreddit, Level().Default)
+#         links = removeDoneLinks(links)
+#         listToFile(links, linkStorage)
+#     else:
+#         links = fileToList(linkStorage)
+
+# m = Manager()
+# for link in links:
+#     print(f"Now creating video for: {link}")
+#     didWork = m.createTikTok(link)
+#     if didWork:
+#         deleteFromFile(linkStorage, link)
+#         addToDoneVideos(link)
+# print(f"During the operation there were: {m.errorCount} deletion problems")
 
 #TODO sanaitize the text for text to speech, AITA -> Am i the asshole
 #TODO add ability to read comments
