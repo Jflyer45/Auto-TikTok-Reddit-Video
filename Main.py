@@ -48,33 +48,30 @@ def removeDoneLinks(links):
             finalList.append(link)
     return finalList
 
-Manager().createTikTok("https://www.reddit.com/r/TrueOffMyChest/comments/v0kq5j/my_sister_is_going_to_tell_our_parents_shes/")
+subreddit = "TrueOffMyChest"
+linkStorage = f"{subreddit}_Stories.txt"
 
+if not os.path.exists(linkStorage):
+    links = getTopOfTodayLinks(subreddit)
+    links = removeDoneLinks(links)
+    listToFile(links, linkStorage)
+else:
+    if isFileEmpty(linkStorage):
+        os.remove(linkStorage)
+        links = getTopOfTodayLinks(subreddit, Level().Default)
+        links = removeDoneLinks(links)
+        listToFile(links, linkStorage)
+    else:
+        links = fileToList(linkStorage)
 
-# subreddit = "TrueOffMyChest"
-# linkStorage = f"{subreddit}_Stories.txt"
-
-# if not os.path.exists(linkStorage):
-#     links = getTopOfTodayLinks(subreddit)
-#     links = removeDoneLinks(links)
-#     listToFile(links, linkStorage)
-# else:
-#     if isFileEmpty(linkStorage):
-#         os.remove(linkStorage)
-#         links = getTopOfTodayLinks(subreddit, Level().Default)
-#         links = removeDoneLinks(links)
-#         listToFile(links, linkStorage)
-#     else:
-#         links = fileToList(linkStorage)
-
-# m = Manager()
-# for link in links:
-#     print(f"Now creating video for: {link}")
-#     didWork = m.createTikTok(link)
-#     if didWork:
-#         deleteFromFile(linkStorage, link)
-#         addToDoneVideos(link)
-# print(f"During the operation there were: {m.errorCount} deletion problems")
+m = Manager()
+for link in links:
+    print(f"Now creating video for: {link}")
+    didWork = m.createTikTok(link)
+    if didWork:
+        deleteFromFile(linkStorage, link)
+        addToDoneVideos(link)
+print(f"During the operation there were: {m.errorCount} deletion problems")
 
 #TODO sanaitize the text for text to speech, AITA -> Am i the asshole
 #TODO add ability to read comments
