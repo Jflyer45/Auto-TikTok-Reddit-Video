@@ -52,8 +52,9 @@ else:
 m = Manager()
 for link in links:
     print(f"Now creating video for: {link}")
-    m.createTikTok(link)
-    deleteFromFile(linkStorage, link)
+    didWork = m.createTikTok(link)
+    if didWork:
+        deleteFromFile(linkStorage, link)
 print(f"During the operation there were: {m.errorCount} deletion problems")
 
 #TODO sanaitize the text for text to speech, AITA -> Am i the asshole

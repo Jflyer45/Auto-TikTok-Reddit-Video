@@ -120,7 +120,7 @@ class Manager:
         audioclip.close()
         new_audioclip.close()
 
-
+    # Returns true or false if it was sucessful or not
     def createTikTok(self, link):
         try:
             print("Getting screenshots and texts")
@@ -134,9 +134,11 @@ class Manager:
 
             print("Cleaning up")
             self.cleanUp(imagePaths, audioPaths)
+            return True
         except:
             self.errorCount += 1
             self.cleanUp(self.ImagePaths, self.audioPaths)
+            return False
 
     ### Helper Methods ###
     def choseRandomFileFromFolder(self, folderPath):
