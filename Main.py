@@ -26,23 +26,9 @@ def fileToList(file):
     return list2
 
 def deleteFromFile(file, item):
-    items = fileToList(file)
-    index = -1
-    for i in range(0, len(items)):
-        if items[i] == item:
-            index = i
-    with open(file, 'r') as fr:
-        # reading line by line
-        lines = fr.readlines()
-         
-        # pointer for position
-        ptr = 1
-     
-        # opening in writing mode
-        with open('stories.txt', 'w') as fp:
-            for itemm in list:
-                # write each item on a new line
-                fp.write("%s\n" % itemm)
+    links = fileToList(file)
+    links.remove(item)
+    listToFile(links)
 
 links = getTopOfAllTimeLinks("AmItheAsshole")
 print(links)
