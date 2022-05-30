@@ -81,8 +81,6 @@ class Manager:
         new_audioclip = CompositeAudioClip([audioclip])
         videoclip.audio = new_audioclip
         print(new_audioclip.duration)
-        audioclip.close()
-        new_audioclip.close()
 
         # Resize image
         for path in imagePaths:
@@ -113,10 +111,14 @@ class Manager:
         videoclip = CompositeVideoClip(clipsToCat)
         print(f"Now writing the video, there are {len(clipsToCat)} to cat")
         videoclip = videoclip.subclip(0, currentTime)
-        print(f"File Name: {fileName}")
+        print(f"File Name before sanitize: {fileName}")
+        print(f"File Name after sanitize: {sanitize(fileName)}")
+        finalPath = self.finalVideosPATH + "\\" + f"{sanitize(fileName)}.mp4"
 
         #TODO SANATIZE THE FIlE NAME
-        videoclip.write_videofile(self.finalVideosPATH + "\\" + f"{sanitize(fileName)}.mp4", fps=24, threads=10)
+        videoclip.write_videofile(finalPath, fps=24, threads=10)
+        audioclip.close()
+        new_audioclip.close()
 
 
     def createTikTok(self, link):

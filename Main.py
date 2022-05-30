@@ -58,3 +58,4 @@ print(f"During the operation there were: {m.errorCount} deletion problems")
 
 #TODO sanaitize the text for text to speech, AITA -> Am i the asshole
 #TODO add ability to read comments
+#TODO Create a txt to store all the videos that were created before
