@@ -8,10 +8,10 @@ from selenium import *
 from webdriver_manager.chrome import ChromeDriverManager
 
 class UploadManager:  
-    def __init__(self, driver):
+    def __init__(self):
         self.loginInfo = ["jeremyreddit", "Deltafire2952#"]
 
-        self.driver = driver
+        self.driver = None
         self.usernameBoxXPATH = "//input[@name='email']"
         self.passwordBoxXPATH = "//input[@type='password']"
         self.loginButtonXPATH = "//button[contains(text(), 'Log in')]"
@@ -63,7 +63,7 @@ class UploadManager:
             sleep(5)
             times += 1
 
-    def uploadVideo(self, videoPath):
+    def uploadVideo(self, videoPath, caption):
         option = webdriver.ChromeOptions()
         option.add_argument("--profile-directory=Default")
         option.add_argument("--user-data-dir=C:\\Users\\Jeremy\\AppData\\Local\\Google\\Chrome\\User Data")
@@ -77,11 +77,11 @@ class UploadManager:
         iframe = self.driver.find_element_by_xpath("//iframe")
         self.driver.switch_to.frame(iframe)
 
-        self.typeCaption("I secretly set up an emergency fund from my friend’s money he owed me #Reddit #TruthOffMyChest")
+        self.typeCaption(caption)
         self.selectFile(videoPath)
         self.waitTillDoneUploading()
         self.clickPost()
-        sleep(10)
+        sleep(5)
 
 # option = webdriver.ChromeOptions()
 # option.add_argument("--profile-directory=Default")

@@ -1,11 +1,15 @@
 from genericpath import isfile
+from re import sub
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from RedditPost import RedditPost
 from moviepy.editor import *
 from Picture import Picture
 from Manager import Manager
+from TikTokUploadManager import UploadManager
 from RedditManager import *
+
+subredditList = []
 
 def listToFile(list, fileName):
     with open(fileName, 'w') as fp:
@@ -48,30 +52,62 @@ def removeDoneLinks(links):
             finalList.append(link)
     return finalList
 
-subreddit = "TrueOffMyChest"
-linkStorage = f"{subreddit}_Stories.txt"
+class TopOfEnum:
+    def __init__(self):
+        self.Today = "Today"
+        self.Week = "Week"
+        self.Month = "Month"
+        self.Year = "Year"
+        self.AllTime = "AllTime"
 
-if not os.path.exists(linkStorage):
-    links = getTopOfTodayLinks(subreddit)
-    links = removeDoneLinks(links)
-    listToFile(links, linkStorage)
-else:
-    if isFileEmpty(linkStorage):
-        os.remove(linkStorage)
-        links = getTopOfTodayLinks(subreddit, Level().Default)
-        links = removeDoneLinks(links)
-        listToFile(links, linkStorage)
+def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
+    if TopEnum == TopOfEnum().Today:
+        link = getTopOfTodayLinks(subreddit)[0]
+    elif TopEnum == TopOfEnum().Week:
+        link = getTopOfWeekLinks(subreddit)[0]
+    elif TopEnum == TopOfEnum().Month:
+        link = getTopOfWeekLinks(subreddit)[0]
+    elif TopEnum == TopOfEnum().Year:
+        link = getTopOfYearLinks(subreddit)[0]
+    elif TopEnum == TopOfEnum().AllTime:
+        link = getTopOfAllTimeLinks(subreddit)[0]
     else:
-        links = fileToList(linkStorage)
+        link = getTopOfTodayLinks(subreddit)[0]
+    
+    m = Manager()
+    m.createTikTok(link)
+    absolutePath = os.path.abspath(m.currentVideoPath)
+    um = UploadManager()
+    um.uploadVideo(absolutePath, f"{m.currentTitle} #Reddit {subreddit}")
+    # Once uploaded move video to posted folder
 
-m = Manager()
-for link in links:
-    print(f"Now creating video for: {link}")
-    didWork = m.createTikTok(link)
-    if didWork:
-        deleteFromFile(linkStorage, link)
-        addToDoneVideos(link)
-print(f"During the operation there were: {m.errorCount} deletion problems")
+createAndPost("TruthOffMyChest", TopOfEnum().AllTime)
+
+
+# subreddit = "TrueOffMyChest"
+# linkStorage = f"{subreddit}_Stories.txt"
+
+# if not os.path.exists(linkStorage):
+#     links = getTopOfTodayLinks(subreddit)
+#     links = removeDoneLinks(links)
+#     listToFile(links, linkStorage)
+# else:
+#     if isFileEmpty(linkStorage):
+#         os.remove(linkStorage)
+#         links = getTopOfTodayLinks(subreddit, Level().Default)
+#         links = removeDoneLinks(links)
+#         listToFile(links, linkStorage)
+#     else:
+#         links = fileToList(linkStorage)
+
+# m = Manager()
+# for link in links:
+#     print(f"Now creating video for: {link}")
+#     didWork = m.createTikTok(link)
+#     if didWork:
+#         deleteFromFile(linkStorage, link)
+#         addToDoneVideos(link)
+# print(f"During the operation there were: {m.errorCount} deletion problems")
 
 #TODO sanaitize the text for text to speech, AITA -> Am i the asshole
 #TODO add ability to read comments

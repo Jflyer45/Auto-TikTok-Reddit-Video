@@ -560,3 +560,33 @@ JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.98467d
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1653949990066	geckodriver	INFO	Listening on 127.0.0.1:59338
+1653949993148	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "59339" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilecgTdXg"
+*** You are running in headless mode.
+1653949993367	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilecgTdXg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59339/devtools/browser/5d1b4749-7abf-4c63-8d3d-6cbe8f9256fc
+1653949994041	Marionette	INFO	Listening on port 59359
+Read port: 59359
+1653949994154	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.98467d6276eed5d72a5b.js, line 1: unreachable code after return statement
+1653950003758	Marionette	INFO	Stopped listening on port 59359
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653950519896	geckodriver	INFO	Listening on 127.0.0.1:59674
+1653950522948	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "59675" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofiletovReT"
+*** You are running in headless mode.
+1653950523141	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofiletovReT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59675/devtools/browser/bacff7ca-e738-4d06-a43a-2c278c9ba380
+1653950523812	Marionette	INFO	Listening on port 59697
+Read port: 59697
+1653950523859	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.98467d6276eed5d72a5b.js, line 1: unreachable code after return statement
+1653950526689	Marionette	INFO	Stopped listening on port 59697
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

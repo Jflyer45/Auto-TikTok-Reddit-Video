@@ -19,6 +19,8 @@ class Manager:
         self.backgroundVideoPATH = os.getcwd() +  "\\Background_videos"
         self.finalVideosPATH = os.getcwd() +  "\\Final_Videos"
         self.errorCount = 0
+        self.currentTitle = None
+        self.currentVideoPath = None
 
     def getHeadlessDriver(self):
         options = webdriver.ChromeOptions()
@@ -37,6 +39,7 @@ class Manager:
         driver.get(link)
 
         post = RedditPost(driver)
+        self.currentTitle = post.getTitle()
         texts = [post.getTitle()] + post.getParagraphs()
         post.screenShotTitle()
         post.screenShotOfParagraphs()
@@ -130,6 +133,7 @@ class Manager:
         videoclip.write_videofile(finalPath, fps=24, threads=10)
         audioclip.close()
         new_audioclip.close()
+        return finalPath
 
     # Returns true or false if it was sucessful or not
     def createTikTok(self, link):
@@ -141,7 +145,7 @@ class Manager:
             audioPaths = self.textToSpeech(texts)
 
             print("Creating video")
-            self.createVideo(imagePaths, audioPaths, texts[0])
+            self.currentVideoPath = self.createVideo(imagePaths, audioPaths, texts[0])
 
             print("Cleaning up")
             self.cleanUp(imagePaths, audioPaths)
@@ -185,7 +189,7 @@ class Manager:
         self.audioPaths = []
 
     def get_concat_h(self, im1, im2):
-        im2 = im2.resize((im2.width, im1.height))
+        im1 = im1.resize((im1.width, im2.height))
         dst = Image.new('RGB', (im1.width + im2.width, im1.height))
         dst.paste(im1, (0, 0))
         dst.paste(im2, (im1.width, 0))
