@@ -10,6 +10,7 @@ from Picture import Picture
 from sanitize_filename import sanitize
 from PIL import Image
 from webdriver_manager.chrome import ChromeDriverManager
+import shutil
 
 class Manager:
     def __init__(self):  
@@ -18,9 +19,11 @@ class Manager:
         self.texts = []
         self.backgroundVideoPATH = os.getcwd() +  "\\Background_videos"
         self.finalVideosPATH = os.getcwd() +  "\\Final_Videos"
+        self.postedVideosPATH = os.getcwd() +  "\\Final_Videos\\Posted"
         self.errorCount = 0
         self.currentTitle = None
         self.currentVideoPath = None
+        self.currentVideoFilename = None
 
     def getHeadlessDriver(self):
         options = webdriver.ChromeOptions()
@@ -31,6 +34,10 @@ class Manager:
         opts = webdriver.FirefoxOptions()
         opts.headless = True
         return webdriver.Firefox(options=opts)
+
+    def moveToPosted(self):
+        toPath = self.finalVideosPATH + "\\" + self.postedVideosPATH
+        shutil.move(self.currentVideoPath, toPath)
 
     # This gets the texts and images
     def getRedditStory(self, link):
@@ -128,6 +135,7 @@ class Manager:
         print(f"File Name before sanitize: {fileName}")
         print(f"File Name after sanitize: {sanitize(fileName)}")
         finalPath = self.finalVideosPATH + "\\" + f"{sanitize(fileName)}.mp4"
+        self.currentVideoFilename = f"{sanitize(fileName)}.mp4"
 
         #TODO SANATIZE THE FIlE NAME
         videoclip.write_videofile(finalPath, fps=24, threads=10)

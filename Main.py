@@ -8,8 +8,9 @@ from Picture import Picture
 from Manager import Manager
 from TikTokUploadManager import UploadManager
 from RedditManager import *
+import shutil
 
-subredditList = []
+subredditList = ["TruthOffMyChest", "AmItheAsshole"]
 
 def listToFile(list, fileName):
     with open(fileName, 'w') as fp:
@@ -78,10 +79,12 @@ def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
     m.createTikTok(link)
     absolutePath = os.path.abspath(m.currentVideoPath)
     um = UploadManager()
-    um.uploadVideo(absolutePath, f"{m.currentTitle} #Reddit {subreddit}")
+    um.uploadVideo(absolutePath, f"{m.currentTitle} #Reddit #{subreddit}")
     # Once uploaded move video to posted folder
+    m.moveToPosted()
+    addToDoneVideos(link)
 
-createAndPost("TruthOffMyChest", TopOfEnum().AllTime)
+createAndPost("AmItheAsshole", TopOfEnum().AllTime)
 
 
 # subreddit = "TrueOffMyChest"
