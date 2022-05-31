@@ -24,3 +24,5 @@ class RedditPost(Webpage):
     def getCommentsElements(self):
         xpath = "//div[@id='AppRouter-main-content']/div[@tabindex='-1']/div/div[2]/div[5]/div/div/div"
         self.driver.find_elements_by_xpath(xpath)
+        #//button[contains(text(), 'Save')]
+        # maybe check the expand and deexpanders? Could be close by
