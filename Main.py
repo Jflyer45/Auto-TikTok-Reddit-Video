@@ -84,7 +84,9 @@ def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
     m.moveToPosted()
     addToDoneVideos(link)
 
-Manager().createTikTok("https://www.reddit.com/r/tifu/comments/uwtkqz/tifu_by_sending_a_call_from_the_international/")
+# TODO THIS IS LIKE NO LONGER MAIN, NEED A NEW UTILS OR SOMETHING
+
+# Manager().createTikTok("https://www.reddit.com/r/tifu/comments/uwtkqz/tifu_by_sending_a_call_from_the_international/")
 
 
 # createAndPost("AmItheAsshole", TopOfEnum().AllTime)

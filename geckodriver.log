@@ -675,3 +675,36 @@ Read port: 57010
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1653967268638	geckodriver	INFO	Listening on 127.0.0.1:60511
+1653967271670	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "60512" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile1oSItd"
+*** You are running in headless mode.
+1653967271920	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile1oSItd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60512/devtools/browser/7b48f92f-0b2b-4489-90ac-ef9fcd28c490
+1653967272684	Marionette	INFO	Listening on port 60536
+Read port: 60536
+1653967272803	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653967276900	Marionette	INFO	Stopped listening on port 60536
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653967382614	geckodriver	INFO	Listening on 127.0.0.1:60689
+1653967385641	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "60690" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile06sgtI"
+*** You are running in headless mode.
+1653967385868	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile06sgtI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60690/devtools/browser/b1ed03b0-fa17-42b3-8d16-59f8124204cb
+1653967386565	Marionette	INFO	Listening on port 60712
+Read port: 60712
+1653967386671	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+1653967390094	Marionette	INFO	Stopped listening on port 60712
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
