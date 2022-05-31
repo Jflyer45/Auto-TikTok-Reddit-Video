@@ -39,11 +39,26 @@ class Manager:
         toPath = self.finalVideosPATH + "\\" + self.postedVideosPATH
         shutil.move(self.currentVideoPath, toPath)
 
+    def existsElement(self, xpath, driver):
+        try:
+            driver.find_element_by_xpath(xpath)
+        except:
+            return False
+        return True
+
     # This gets the texts and images
     def getRedditStory(self, link):
         #TODO move images to image folder
         driver = self.getHeadlessDriverFireFox()
         driver.get(link)
+
+        xpath = "//button[contains(text(), 'Yes')]"
+        xpath2 = "//button[contains(text(), 'Click to see nsfw')]"
+        if self.existsElement(xpath, driver):
+            driver.find_element_by_xpath(xpath).click()
+            sleep(.5)
+            if self.existsElement(xpath2, driver): 
+                driver.find_element_by_xpath(xpath2).click()
 
         post = RedditPost(driver)
         self.currentTitle = post.getTitle()
