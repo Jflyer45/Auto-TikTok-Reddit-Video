@@ -42,6 +42,16 @@ class RedditPost(Webpage):
             i += 1
         return comments
 
+    def getCommentsFullText(self, limit=5):
+        comments = self.getCommentsParagraphs(limit)
+        completeComments = []
+        for comment in comments:
+            fullPara = ""
+            for para in comment:
+                fullPara += para
+            completeComments.append(fullPara + "\n")
+        return completeComments
+
     def screenShotTitle(self):
         element = self.driver.find_element_by_xpath(self.titleXPATH)
         self.screenShotOfElement(element, "Title")
@@ -58,7 +68,7 @@ class RedditPost(Webpage):
         elements = self.driver.find_elements_by_xpath(self.paragraphXPATH)
         self.screenShotOfElements(elements, "Paragraph")
     
-    def screenShotOfComment(self, limit=5):
+    def screenShotOfComments(self, limit=5):
         comments = self.driver.find_elements_by_xpath(self.wholeCommentXPATH)
         if len(comments) > limit:
             shortenList = []
@@ -67,9 +77,9 @@ class RedditPost(Webpage):
             comments = shortenList
         self.screenShotOfElements(comments, "Comment")
 
-driver = webdriver.Chrome()
-driver.get("https://www.reddit.com/r/AskReddit/comments/v1l05z/what_currently_legal_thing_do_you_expect_to_be/")
-post = RedditPost(driver)
-comments = post.getCommentsParagraphs()
-post.screenShotOfComment(3)
-print(comments)
+# driver = webdriver.Chrome()
+# driver.get("https://www.reddit.com/r/AskReddit/comments/v1l05z/what_currently_legal_thing_do_you_expect_to_be/")
+# post = RedditPost(driver)
+# comments = post.getCommentsParagraphs(3)
+# post.screenShotOfComment(3)
+# print(comments)

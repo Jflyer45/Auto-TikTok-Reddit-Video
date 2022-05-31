@@ -12,6 +12,8 @@ import shutil
 
 subredditList = ["TruthOffMyChest", "AmItheAsshole"]
 
+# File manager class?
+
 def listToFile(list, fileName):
     with open(fileName, 'w') as fp:
         for i in range(0, len(list)):
@@ -60,6 +62,8 @@ class TopOfEnum:
         self.Month = "Month"
         self.Year = "Year"
         self.AllTime = "AllTime"
+
+# Class for Runs?
 
 def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
     if TopEnum == TopOfEnum().Today:

@@ -11,7 +11,7 @@ from sanitize_filename import sanitize
 from PIL import Image
 from webdriver_manager.chrome import ChromeDriverManager
 import shutil
-from AWS import textToSpeech
+# from AWS import textToSpeech
 
 class Manager:
     def __init__(self):  
@@ -76,6 +76,34 @@ class Manager:
         for i in range(1, len(texts)):
             imagePaths.append(f"Paragraph{i}.png")
             self.ImagePaths.append(f"Paragraph{i}.png")
+            i += 1
+        return texts, imagePaths
+
+    def getRedditTitleAndComments(self, link, limit):
+        driver = webdriver.Chrome()
+        driver.get(link)
+
+        # Make a method inside reddit post
+        xpath = "//button[contains(text(), 'Yes')]"
+        xpath2 = "//button[contains(text(), 'Click to see nsfw')]"
+        if self.existsElement(xpath, driver):
+            driver.find_element_by_xpath(xpath).click()
+            sleep(.5)
+            if self.existsElement(xpath2, driver): 
+                driver.find_element_by_xpath(xpath2).click()
+
+        post = RedditPost(driver)
+        self.currentTitle = post.getTitle()
+        texts = [post.getTitle()] + post.getCommentsFullText(limit)
+        post.screenShotTitle()
+        post.screenShotOfComments(limit)
+
+        driver.close()
+        imagePaths = []
+        imagePaths.append("Title.png")
+        for i in range(1, len(texts)):
+            imagePaths.append(f"Comment{i}.png")
+            self.ImagePaths.append(f"Comment{i}.png")
             i += 1
         return texts, imagePaths
 
@@ -219,3 +247,6 @@ class Manager:
         titleAndAward = self.get_concat_v(award, title)
         finalImage = self.get_concat_h(upvotes, titleAndAward)
         finalImage.save(newPath)
+
+thing1, thing2 = Manager().getRedditTitleAndComments("https://www.reddit.com/r/AskReddit/comments/v1l05z/what_currently_legal_thing_do_you_expect_to_be/", 3)
+print(thing1, thing2)
