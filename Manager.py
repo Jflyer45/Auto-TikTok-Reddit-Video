@@ -67,7 +67,7 @@ class Manager:
     def textToSpeech(self, texts):
         driver = webdriver.Chrome()
         driver.get("https://ttstool.com/")
-
+        
         sleep(3)
         page = TTSPage(driver)
         page.clickMicrosoft()
