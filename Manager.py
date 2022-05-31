@@ -11,6 +11,7 @@ from sanitize_filename import sanitize
 from PIL import Image
 from webdriver_manager.chrome import ChromeDriverManager
 import shutil
+from AWS import textToSpeech
 
 class Manager:
     def __init__(self):  
@@ -80,30 +81,14 @@ class Manager:
 
     # Where texts is a [] of strings, then gets audios
     def textToSpeech(self, texts):
-        driver = webdriver.Chrome()
-        driver.get("https://ttstool.com/")
-        
-        sleep(3)
-        page = TTSPage(driver)
-        page.clickMicrosoft()
-        page.clickEnglish()
-        page.clickDavid()
-        page.clickMedium()
-
         audioPaths = []
         i = 1
         for text in texts:
-            page.typeText(text)
             fileName = f"audio{i}.mp3"
+            textToSpeech(text, fileName)
             audioPaths.append(fileName)
             self.audioPaths.append(fileName)
-            page.clickDownload(fileName)
-            page.clearText()
             i += 1
-
-        #TODO move audio files to audio folder
-
-        driver.close()
         return audioPaths
 
     def createVideo(self, imagePaths, audioPaths, fileName):

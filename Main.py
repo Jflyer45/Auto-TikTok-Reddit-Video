@@ -84,8 +84,10 @@ def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
     m.moveToPosted()
     addToDoneVideos(link)
 
-createAndPost("AmItheAsshole", TopOfEnum().AllTime)
+Manager().createTikTok("https://www.reddit.com/r/tifu/comments/uwtkqz/tifu_by_sending_a_call_from_the_international/")
 
+
+# createAndPost("AmItheAsshole", TopOfEnum().AllTime)
 
 # subreddit = "TrueOffMyChest"
 # linkStorage = f"{subreddit}_Stories.txt"
