@@ -1,15 +1,13 @@
-from genericpath import isfile
-from re import sub
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from RedditPost import RedditPost
-from moviepy.editor import *
-from Picture import Picture
-from Manager import Manager
-from TikTokUploadManager import UploadManager
-from RedditManager import *
-from FileManager import *
-from PostingManager import *
+# from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
+# from RedditPost import RedditPost
+# from moviepy.editor import *
+# from Picture import Picture
+# from Manager import Manager
+# from TikTokUploadManager import UploadManager
+# from RedditManager import *
+# from FileManager import *
+# from PostingManager import *
 
 subredditList = ["TruthOffMyChest", "AmItheAsshole"]
 

@@ -1,4 +1,6 @@
 import sys
 sys.path.append('../Auto-TikTok-Reddit-Video')
-from Main import *
-createAndPost("TruthOffMyChest", TopOfEnum().Today)
+from PostingManager import * 
+
+link = TopOfLinkGetter("TruthOffMyChest", TopOfEnum().Today)
+createAndPost(link)

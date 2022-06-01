@@ -25,6 +25,7 @@ class Manager:
         self.currentTitle = None
         self.currentVideoPath = None
         self.currentVideoFilename = None
+        self.subReddit = None
 
     def getHeadlessDriver(self):
         options = webdriver.ChromeOptions()
@@ -40,6 +41,9 @@ class Manager:
         toPath = self.finalVideosPATH + "\\" + self.postedVideosPATH
         shutil.move(self.currentVideoPath, toPath)
 
+    def getSubredditFromLink(self, link):
+        return link.split("/r/")[1].split("/")[0]
+
     def existsElement(self, xpath, driver):
         try:
             driver.find_element_by_xpath(xpath)
@@ -52,6 +56,8 @@ class Manager:
         #TODO move images to image folder
         driver = self.getHeadlessDriverFireFox()
         driver.get(link)
+
+        self.subReddit = self.getSubredditFromLink(link)
 
         xpath = "//button[contains(text(), 'Yes')]"
         xpath2 = "//button[contains(text(), 'Click to see nsfw')]"
@@ -248,5 +254,4 @@ class Manager:
         finalImage = self.get_concat_h(upvotes, titleAndAward)
         finalImage.save(newPath)
 
-thing1, thing2 = Manager().getRedditTitleAndComments("https://www.reddit.com/r/AskReddit/comments/v1l05z/what_currently_legal_thing_do_you_expect_to_be/", 3)
-print(thing1, thing2)
+print(Manager.getSubredditFromLink("reddit.com/r/AmItheAsshole/top/?t=day"))
