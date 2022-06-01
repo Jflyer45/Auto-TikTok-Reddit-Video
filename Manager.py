@@ -4,7 +4,7 @@ from Deperacated.TTSPage import TTSPage
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import os, random
-from RedditPost import RedditPost
+from Webscrapping.RedditPost import RedditPost
 from moviepy.editor import *
 from Picture import Picture
 from sanitize_filename import sanitize

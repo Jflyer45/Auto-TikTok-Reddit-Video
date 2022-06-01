@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from SeleniumUtls import *
 
+
 class Level:
     def __init__(self):
         self.Default = 0
