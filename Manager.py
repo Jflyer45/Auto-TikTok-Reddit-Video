@@ -11,7 +11,7 @@ from sanitize_filename import sanitize
 from PIL import Image
 from webdriver_manager.chrome import ChromeDriverManager
 import shutil
-# from AWS import textToSpeech
+from AWS import textToSpeech
 
 class Manager:
     def __init__(self):  
