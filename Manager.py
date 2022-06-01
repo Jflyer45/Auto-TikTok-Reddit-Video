@@ -3,7 +3,7 @@ from selenium import webdriver
 import os, random
 from Webscrapping.RedditPost import RedditPost
 from moviepy.editor import *
-from Picture import Picture
+from Utls.Picture import Picture
 from sanitize_filename import sanitize
 from PIL import Image
 import shutil

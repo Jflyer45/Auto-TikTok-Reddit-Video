@@ -1,6 +1,5 @@
 from importlib.resources import path
 from random import random
-import pyautogui
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options

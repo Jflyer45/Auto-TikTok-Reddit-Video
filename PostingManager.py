@@ -1,7 +1,7 @@
-from RedditManager import *
+from Webscrapping.RedditManager import *
 from Manager import *
 from TikTokUploadManager import UploadManager
-from FileManager import *
+from Utls.FileManager import *
 
 class TopOfEnum:
     def __init__(self):
