@@ -3,10 +3,6 @@ from Page import Webpage
 from selenium import webdriver
 
 class RedditPost(Webpage):
-    
-    #//span[contains(text(), 'level 1')]/.. gets whole comment
-    # //span[contains(text(), 'level 1')]/..//div[@data-testid='comment']
-
     def __init__(self, driver):  
         self.driver = driver
         self.titleXPATH = "//div[@data-test-id='post-content']//h1"
@@ -76,10 +72,3 @@ class RedditPost(Webpage):
                 shortenList.append(comments[i])
             comments = shortenList
         self.screenShotOfElements(comments, "Comment")
-
-# driver = webdriver.Chrome()
-# driver.get("https://www.reddit.com/r/AskReddit/comments/v1l05z/what_currently_legal_thing_do_you_expect_to_be/")
-# post = RedditPost(driver)
-# comments = post.getCommentsParagraphs(3)
-# post.screenShotOfComment(3)
-# print(comments)

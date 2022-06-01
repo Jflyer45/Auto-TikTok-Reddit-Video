@@ -1,6 +1,6 @@
 from asyncio import threads
 from time import sleep
-from TTSPage import TTSPage
+from Deperacated.TTSPage import TTSPage
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import os, random
@@ -12,6 +12,7 @@ from PIL import Image
 from webdriver_manager.chrome import ChromeDriverManager
 import shutil
 from AWS import textToSpeech
+from Webscrapping.SeleniumUtls import *
 
 class Manager:
     def __init__(self):  
@@ -26,16 +27,6 @@ class Manager:
         self.currentVideoPath = None
         self.currentVideoFilename = None
         self.subReddit = None
-
-    def getHeadlessDriver(self):
-        options = webdriver.ChromeOptions()
-        options.add_argument("headless")
-        return webdriver.Chrome(executable_path= ChromeDriverManager().install(), chrome_options=options)
-
-    def getHeadlessDriverFireFox(self):
-        opts = webdriver.FirefoxOptions()
-        opts.headless = True
-        return webdriver.Firefox(options=opts)
 
     def moveToPosted(self):
         toPath = self.finalVideosPATH + "\\" + self.postedVideosPATH
