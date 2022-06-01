@@ -1,15 +1,11 @@
-from asyncio import threads
 from time import sleep
-from Deperacated.TTSPage import TTSPage
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import os, random
 from Webscrapping.RedditPost import RedditPost
 from moviepy.editor import *
 from Picture import Picture
 from sanitize_filename import sanitize
 from PIL import Image
-from webdriver_manager.chrome import ChromeDriverManager
 import shutil
 from AWS import textToSpeech
 from Webscrapping.SeleniumUtls import *

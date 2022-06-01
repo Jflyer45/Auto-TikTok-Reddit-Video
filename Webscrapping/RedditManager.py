@@ -1,8 +1,5 @@
 from time import sleep
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from SeleniumUtls import *
-
 
 class Level:
     def __init__(self):
@@ -36,12 +33,6 @@ def getTopOfHelper(subreddit, extention):
     base =  f"https://www.reddit.com/r/{subreddit}/"
     link = base + extention
     return link
-
-def pageDown(driver, times):
-    html = driver.find_element_by_tag_name('html')
-    for i in range(0, times):
-        html.send_keys(Keys.END)
-        sleep(.5)
 
 def getFromReddit(link, amount=Level().Default):
     driver = getHeadlessDriver()
