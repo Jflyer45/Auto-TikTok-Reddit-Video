@@ -11,7 +11,7 @@ class TopOfEnum:
         self.Year = "Year"
         self.AllTime = "AllTime"
 
-def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
+def TopOfLinkGetter(subreddit, TopEnum=TopOfEnum().Today):
     if TopEnum == TopOfEnum().Today:
         link = getTopOfTodayLinks(subreddit)[0]
     elif TopEnum == TopOfEnum().Week:
@@ -24,12 +24,47 @@ def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
         link = getTopOfAllTimeLinks(subreddit)[0]
     else:
         link = getTopOfTodayLinks(subreddit)[0]
+    return link
+
+def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
+    # Get Link
+    link = TopOfLinkGetter(subreddit, TopEnum)
     
+    # Create video
     m = Manager()
     m.createTikTok(link)
     absolutePath = os.path.abspath(m.currentVideoPath)
+
+    # Upload Video
     um = UploadManager()
     um.uploadVideo(absolutePath, f"{m.currentTitle} #Reddit #{subreddit}")
+
     # Once uploaded move video to posted folder
     m.moveToPosted()
     addToDoneVideos(link)
+
+# NEEDS BREAKING UP AND REFACTORING
+def makeMany(subreddit):
+    linkStorage = f"{subreddit}_Stories.txt"
+
+    if not os.path.exists(linkStorage):
+        links = getTopOfTodayLinks(subreddit)
+        links = removeDoneLinks(links)
+        listToFile(links, linkStorage)
+    else:
+        if isFileEmpty(linkStorage):
+            os.remove(linkStorage)
+            links = getTopOfTodayLinks(subreddit, Level().Default)
+            links = removeDoneLinks(links)
+            listToFile(links, linkStorage)
+        else:
+            links = fileToList(linkStorage)
+
+    m = Manager()
+    for link in links:
+        print(f"Now creating video for: {link}")
+        didWork = m.createTikTok(link)
+        if didWork:
+            deleteFromFile(linkStorage, link)
+            addToDoneVideos(link)
+    print(f"During the operation there were: {m.errorCount} deletion problems")
