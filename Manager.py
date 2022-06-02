@@ -130,10 +130,11 @@ class Manager:
         videoPath = self.backgroundVideoPATH + "\\" + self.choseRandomFileFromFolder(self.backgroundVideoPATH)
         videoclip = VideoFileClip(videoPath)
 
-        # Resize image
+        # Prepare images
         for path in imagePaths:
             pic = Picture(path)
             pic.resize(1.5)
+            pic.makeTransparent(.8)
 
         # Stich it all together
         i = 0
