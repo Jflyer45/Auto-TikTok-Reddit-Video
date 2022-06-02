@@ -1,4 +1,3 @@
-from importlib.resources import path
 import cv2
 from PIL import Image
 
@@ -15,6 +14,5 @@ class Picture:
     # Where amount is a %
     def makeTransparent(self, amount):
         img = Image.open(self.path)
-
         img.putalpha(255*amount)  # Half alpha; alpha argument must be an int
         img.save(self.path)
