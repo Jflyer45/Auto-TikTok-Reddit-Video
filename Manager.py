@@ -80,7 +80,7 @@ class Manager:
                 newlist.append(f'<speak> {text} <break time="300ms"/> </speak>')
             return newlist
 
-        driver = self.getHeadlessDriverFireFox()
+        driver = getHeadlessDriverFireFox()
         driver.get(link)
 
         # Make a method inside reddit post
@@ -124,17 +124,11 @@ class Manager:
             i += 1
         return audioPaths
 
-    def createVideo(self, imagePaths, audioPaths, fileName):
+    def createVideo(self, imagePaths, audioPaths, fileName, maxLength=180):
         #TODO move video to final video folder
         # Grab backgroud video from background video folder
-        self.concatenate_audio_moviepy(audioPaths, "combinedAudio.mp3")
-
         videoPath = self.backgroundVideoPATH + "\\" + self.choseRandomFileFromFolder(self.backgroundVideoPATH)
         videoclip = VideoFileClip(videoPath)
-        audioclip = AudioFileClip("combinedAudio.mp3")
-        new_audioclip = CompositeAudioClip([audioclip])
-        videoclip.audio = new_audioclip
-        print(new_audioclip.duration)
 
         # Resize image
         for path in imagePaths:
@@ -144,6 +138,7 @@ class Manager:
         # Stich it all together
         i = 0
         currentTime = 0.0
+        audioUsed = []
         clipsToCat = []
         clipsToCat.append(videoclip)
 
@@ -151,6 +146,12 @@ class Manager:
             print(currentTime)
             audioclipTest = AudioFileClip(audioPath)
 
+            # If we were to add another clip, would we go over?
+            if currentTime + audioclipTest.duration > maxLength:
+                print("MAX TIME HIT!")
+                break
+            
+            audioUsed.append(audioPath)
             print(f"{audioPath}, {audioclipTest.duration}")
 
             cat = (ImageClip(imagePaths[i])
@@ -162,22 +163,28 @@ class Manager:
             currentTime += audioclipTest.duration
             i += 1
             audioclipTest.close()
+        
+        videoclip = VideoFileClip(videoPath)
         videoclip = CompositeVideoClip(clipsToCat)
         print(f"Now writing the video, there are {len(clipsToCat)} to cat")
         videoclip = videoclip.subclip(0, currentTime)
-        print(f"File Name before sanitize: {fileName}")
-        print(f"File Name after sanitize: {sanitize(fileName)}")
+
+        self.concatenate_audio_moviepy(audioUsed, "combinedAudio.mp3")
+        audioclip = AudioFileClip("combinedAudio.mp3")
+        new_audioclip = CompositeAudioClip([audioclip])
+        videoclip.audio = new_audioclip
+        print(f"Final audio length: {new_audioclip.duration}")
+
         finalPath = self.finalVideosPATH + "\\" + f"{sanitize(fileName)}.mp4"
         self.currentVideoFilename = f"{sanitize(fileName)}.mp4"
 
-        #TODO SANATIZE THE FIlE NAME
-        videoclip.write_videofile(finalPath, fps=24, threads=10)
+        videoclip.write_videofile(finalPath, threads=10)
         audioclip.close()
         new_audioclip.close()
         return finalPath
 
     # Returns true or false if it was sucessful or not
-    def createTikTok(self, link, commentsMode=False, limit=5):
+    def createTikTok(self, link, commentsMode=False, limit=5, maxLength=180):
         try:
             print("Getting screenshots and texts")
             if commentsMode:
@@ -189,7 +196,7 @@ class Manager:
             audioPaths = self.textToSpeech(texts)
 
             print("Creating video")
-            self.currentVideoPath = self.createVideo(imagePaths, audioPaths, texts[0])
+            self.currentVideoPath = self.createVideo(imagePaths, audioPaths, self.currentTitle, maxLength)
 
             print("Cleaning up")
             self.cleanUp(imagePaths, audioPaths)

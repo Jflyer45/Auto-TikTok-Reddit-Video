@@ -781,3 +781,92 @@ JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cf
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1654132417916	geckodriver	INFO	Listening on 127.0.0.1:57384
+1654132420942	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "57385" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile5dtlml"
+*** You are running in headless mode.
+1654132421248	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile5dtlml\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57385/devtools/browser/276cf1f3-2e38-494e-b04e-30f75e4156d1
+1654132421956	Marionette	INFO	Listening on port 57408
+Read port: 57408
+1654132422060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654132438401	Marionette	INFO	Stopped listening on port 57408
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654181542978	geckodriver	INFO	Listening on 127.0.0.1:50250
+1654181546011	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "50251" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7aGgyy"
+*** You are running in headless mode.
+1654181546339	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7aGgyy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50251/devtools/browser/8f95a07a-4fe4-4172-9adb-3fc4b0785912
+1654181547242	Marionette	INFO	Listening on port 50272
+Read port: 50272
+1654181547343	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654181576243	Marionette	INFO	Stopped listening on port 50272
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654185571050	geckodriver	INFO	Listening on 127.0.0.1:65495
+1654185574071	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "65496" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilet2Ek6T"
+*** You are running in headless mode.
+1654185574281	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilet2Ek6T\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65496/devtools/browser/256ae3bb-d614-45e6-bdf0-f61653646266
+1654185575011	Marionette	INFO	Listening on port 65517
+Read port: 65517
+1654185575078	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654185581893	Marionette	INFO	Stopped listening on port 65517
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654185850944	geckodriver	INFO	Listening on 127.0.0.1:49258
+1654185853976	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "49259" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile1TYwUZ"
+*** You are running in headless mode.
+1654185854183	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile1TYwUZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49259/devtools/browser/fa403476-7654-4beb-bbb4-2d5002cf5e1b
+1654185854907	Marionette	INFO	Listening on port 49279
+Read port: 49279
+1654185854982	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654185860880	Marionette	INFO	Stopped listening on port 49279
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1654186344369	geckodriver	INFO	Listening on 127.0.0.1:49413
+1654186347404	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "49414" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilee6TToN"
+*** You are running in headless mode.
+1654186347607	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilee6TToN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49414/devtools/browser/e08b7811-5f08-4a72-8354-11ddcf9cd32c
+1654186348295	Marionette	INFO	Listening on port 49434
+Read port: 49434
+1654186348406	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654186353333	Marionette	INFO	Stopped listening on port 49434
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654190156652	geckodriver	INFO	Listening on 127.0.0.1:54047
+1654190159681	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "54048" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileYRJUVC"
+*** You are running in headless mode.
+1654190159889	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileYRJUVC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54048/devtools/browser/99232919-93c4-4023-8a2b-d453cde063ee
+1654190160610	Marionette	INFO	Listening on port 54069
+Read port: 54069
+1654190160685	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654190166168	Marionette	INFO	Stopped listening on port 54069
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

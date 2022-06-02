@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../Auto-TikTok-Reddit-Video/Webscrapping')
 from PIL import Image
 from Page import Webpage
 from selenium import webdriver
