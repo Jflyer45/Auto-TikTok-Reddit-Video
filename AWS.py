@@ -17,7 +17,7 @@ def textToSpeech(text, fileName, voice="Matthew"):
     try:
         # Request speech synthesis
         response = polly.synthesize_speech(Text=text, OutputFormat="mp3",
-                                            VoiceId=voice)
+                                            VoiceId=voice, TextType="ssml")
     except (BotoCoreError, ClientError) as error:
         # The service returned an error, exit gracefully
         print(error)
@@ -46,4 +46,4 @@ def textToSpeech(text, fileName, voice="Matthew"):
         print("Could not stream audio")
         sys.exit(-1)
 
-textToSpeech("Hello this is a test!", "test.mp3")
+# textToSpeech('<speak>Hello this is<break time="300ms"/> World talking to you</speak>', "test.mp3")

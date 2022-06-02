@@ -10,6 +10,7 @@ import shutil
 from AWS import textToSpeech
 from Webscrapping.SeleniumUtls import *
 
+
 class Manager:
     def __init__(self):  
         self.audioPaths = []
@@ -73,7 +74,13 @@ class Manager:
         return texts, imagePaths
 
     def getRedditTitleAndComments(self, link, limit):
-        driver = webdriver.Chrome()
+        def addPause(list):
+            newlist = []
+            for text in list:
+                newlist.append(f'<speak> {text} <break time="300ms"/> </speak>')
+            return newlist
+
+        driver = self.getHeadlessDriverFireFox()
         driver.get(link)
 
         # Make a method inside reddit post
@@ -90,6 +97,11 @@ class Manager:
         texts = [post.getTitle()] + post.getCommentsFullText(limit)
         post.screenShotTitle()
         post.screenShotOfComments(limit)
+        post.screenShotAwards()
+        post.screenShotUpvotes()
+        self.assembleTitleImage("Title.png")
+        
+        texts = addPause(texts)
 
         driver.close()
         imagePaths = []
@@ -165,10 +177,13 @@ class Manager:
         return finalPath
 
     # Returns true or false if it was sucessful or not
-    def createTikTok(self, link):
+    def createTikTok(self, link, commentsMode=False, limit=5):
         try:
             print("Getting screenshots and texts")
-            texts, imagePaths = self.getRedditStory(link)
+            if commentsMode:
+                texts, imagePaths = self.getRedditTitleAndComments(link, limit)
+            else:
+                texts, imagePaths = self.getRedditStory(link)
             
             print("Collecting Audios...")
             audioPaths = self.textToSpeech(texts)
@@ -240,5 +255,3 @@ class Manager:
         titleAndAward = self.get_concat_v(award, title)
         finalImage = self.get_concat_h(upvotes, titleAndAward)
         finalImage.save(newPath)
-
-print(Manager.getSubredditFromLink("reddit.com/r/AmItheAsshole/top/?t=day"))

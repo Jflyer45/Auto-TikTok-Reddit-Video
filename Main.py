@@ -8,10 +8,8 @@
 # from RedditManager import *
 # from FileManager import *
 # from PostingManager import *
-
 subredditList = ["TruthOffMyChest", "AmItheAsshole"]
 subredditVideoTypeDic = {"TruthOffMyChest": "TP", "AmItheAsshole": "TP", "AskReddit": "TC"}
-
 
 # Manager().createTikTok("https://www.reddit.com/r/tifu/comments/uwtkqz/tifu_by_sending_a_call_from_the_international/")
 
