@@ -14,5 +14,5 @@ class Picture:
     # Where amount is a %
     def makeTransparent(self, amount):
         img = Image.open(self.path)
-        img.putalpha(255*amount)  # Half alpha; alpha argument must be an int
+        img.putalpha(int(255*amount))  # Half alpha; alpha argument must be an int
         img.save(self.path)

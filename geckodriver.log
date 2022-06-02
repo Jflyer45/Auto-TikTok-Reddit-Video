@@ -870,3 +870,29 @@ JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cf
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1654206663136	geckodriver	INFO	Listening on 127.0.0.1:52161
+1654206666211	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "52162" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilevHrx0l"
+*** You are running in headless mode.
+1654206666621	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilevHrx0l\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52162/devtools/browser/53920c30-ea8c-49ba-ad6c-8dd0cf17442f
+1654206667540	Marionette	INFO	Listening on port 52182
+Read port: 52182
+1654206667575	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654206679826	Marionette	INFO	Stopped listening on port 52182
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654206843944	geckodriver	INFO	Listening on 127.0.0.1:52324
+1654206847000	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52325" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileNgSLkD"
+1654206847352	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileNgSLkD\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52325/devtools/browser/204c7ee9-24f0-4e7b-9cf5-e22250a016f0
+1654206848720	Marionette	INFO	Listening on port 52348
+Read port: 52348
+1654206848772	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654206977721	Marionette	INFO	Stopped listening on port 52348

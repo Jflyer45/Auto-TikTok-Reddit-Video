@@ -80,10 +80,10 @@ class Manager:
                 newlist.append(f'<speak> {text} <break time="300ms"/> </speak>')
             return newlist
 
-        driver = getHeadlessDriverFireFox()
+        driver = webdriver.Firefox()
         driver.get(link)
 
-        # Make a method inside reddit post
+        # Make a method inside reddit post to disable all NSFW shit
         xpath = "//button[contains(text(), 'Yes')]"
         xpath2 = "//button[contains(text(), 'Click to see nsfw')]"
         if self.existsElement(xpath, driver):
