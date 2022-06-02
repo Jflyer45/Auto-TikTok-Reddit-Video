@@ -11,7 +11,7 @@ from sanitize_filename import sanitize
 from PIL import Image
 from webdriver_manager.chrome import ChromeDriverManager
 import shutil
-# from AWS import textToSpeech
+from AWS import textToSpeech
 
 class Manager:
     def __init__(self):  
@@ -80,7 +80,13 @@ class Manager:
         return texts, imagePaths
 
     def getRedditTitleAndComments(self, link, limit):
-        driver = webdriver.Chrome()
+        def addPause(list):
+            newlist = []
+            for text in list:
+                newlist.append(f'<speak> {text} <break time="300ms"/> </speak>')
+            return newlist
+
+        driver = self.getHeadlessDriverFireFox()
         driver.get(link)
 
         # Make a method inside reddit post
@@ -97,6 +103,11 @@ class Manager:
         texts = [post.getTitle()] + post.getCommentsFullText(limit)
         post.screenShotTitle()
         post.screenShotOfComments(limit)
+        post.screenShotAwards()
+        post.screenShotUpvotes()
+        self.assembleTitleImage("Title.png")
+        
+        texts = addPause(texts)
 
         driver.close()
         imagePaths = []
@@ -172,10 +183,13 @@ class Manager:
         return finalPath
 
     # Returns true or false if it was sucessful or not
-    def createTikTok(self, link):
+    def createTikTok(self, link, commentsMode=False, limit=5):
         try:
             print("Getting screenshots and texts")
-            texts, imagePaths = self.getRedditStory(link)
+            if commentsMode:
+                texts, imagePaths = self.getRedditTitleAndComments(link, limit)
+            else:
+                texts, imagePaths = self.getRedditStory(link)
             
             print("Collecting Audios...")
             audioPaths = self.textToSpeech(texts)
@@ -247,6 +261,3 @@ class Manager:
         titleAndAward = self.get_concat_v(award, title)
         finalImage = self.get_concat_h(upvotes, titleAndAward)
         finalImage.save(newPath)
-
-thing1, thing2 = Manager().getRedditTitleAndComments("https://www.reddit.com/r/AskReddit/comments/v1l05z/what_currently_legal_thing_do_you_expect_to_be/", 3)
-print(thing1, thing2)

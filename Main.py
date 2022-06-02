@@ -1,5 +1,3 @@
-from genericpath import isfile
-from re import sub
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from RedditPost import RedditPost
@@ -87,6 +85,8 @@ def createAndPost(subreddit, TopEnum=TopOfEnum().Today):
     # Once uploaded move video to posted folder
     m.moveToPosted()
     addToDoneVideos(link)
+
+Manager().createTikTok("https://www.reddit.com/r/AskReddit/comments/v1l05z/what_currently_legal_thing_do_you_expect_to_be/", True, 8)
 
 # TODO THIS IS LIKE NO LONGER MAIN, NEED A NEW UTILS OR SOMETHING
 

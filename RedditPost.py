@@ -48,7 +48,7 @@ class RedditPost(Webpage):
         for comment in comments:
             fullPara = ""
             for para in comment:
-                fullPara += para
+                fullPara += para + " "
             completeComments.append(fullPara + "\n")
         return completeComments
 
