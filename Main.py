@@ -4,6 +4,7 @@
 # from moviepy.editor import *
 # from Utls.Picture import Picture
 from Manager import Manager
+from PostingManager import *
 # from TikTokUploadManager import UploadManager
 # from Webscrapping.RedditManager import *
 # from Utls.FileManager import *
@@ -11,7 +12,10 @@ from Manager import Manager
 subredditList = ["TruthOffMyChest", "AmItheAsshole"]
 subredditVideoTypeDic = {"TruthOffMyChest": "TP", "AmItheAsshole": "TP", "AskReddit": "TC"}
 
-Manager().createTikTok("https://www.reddit.com/r/TrueOffMyChest/comments/v3gs5i/i_paid_off_my_credit_cards/", False, maxLength=90)
+link = getTopOfTodayLinks("AmItheAsshole")[0]
+createAndPost(link, DONOTPOST=True)
+
+# Manager().createTikTok("https://www.reddit.com/r/TrueOffMyChest/comments/v3gs5i/i_paid_off_my_credit_cards/", False, maxLength=90)
 
 # NSFW
 # https://www.reddit.com/r/AskReddit/comments/uxbh5a/what_were_the_conspiracy_theorists_right_about/

@@ -1,5 +1,5 @@
 from time import sleep
-from SeleniumUtls import *
+from Webscrapping.SeleniumUtls import *
 
 class Level:
     def __init__(self):

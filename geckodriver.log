@@ -962,9 +962,15 @@ DevTools listening on ws://localhost:61940/devtools/browser/fb6ce17e-ed10-4273-b
 Read port: 61965
 1654225144442	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
-1654225189320	geckodriver	INFO	Listening on 127.0.0.1:62046
-1654225192368	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62047" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7wa2vg"
-*** You are running in headless mode.
+console.error: services.settings: 
+  security-state/intermediates Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  Message: TypeError: NetworkError: Network request failed
+  Stack:
+    fetch/</request.onerror@resource://services-settings/Utils.jsm:153:26
+
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+in headless mode.
 1654225192615	Marionette	INFO	Marionette enabled
 [GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7wa2vg\\search.json.mozlz4", (void 0)))
@@ -983,4 +989,72 @@ console.error: services.settings:
 JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Jeremy\AppData\Local\Temp\rust_mozprofile7wa2vg\protections.sqlite
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1654225989541	geckodriver	INFO	Listening on 127.0.0.1:57715
+1654225992594	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "57716" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilepsyQBL"
+*** You are running in headless mode.
+1654225992989	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilepsyQBL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57716/devtools/browser/b3621642-4cce-4a85-8351-5b1508e8d28a
+1654225993883	Marionette	INFO	Listening on port 57738
+Read port: 57738
+1654225993933	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654225999366	Marionette	INFO	Stopped listening on port 57738
+1654226625916	geckodriver	INFO	Listening on 127.0.0.1:57990
+1654226628971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57991" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilespCaIy"
+1654226629330	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilespCaIy\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57991/devtools/browser/c00d0469-54ca-4fb6-8360-f9b68348bc9c
+1654226630744	Marionette	INFO	Listening on port 58017
+Read port: 58017
+1654226630858	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+1654226692848	Marionette	INFO	Stopped listening on port 58017
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 24160, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1654227199187	geckodriver	INFO	Listening on 127.0.0.1:58384
+1654227202238	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58385" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileLdomW8"
+1654227202622	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileLdomW8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58385/devtools/browser/fd6be402-3e1f-40b1-ae57-6d52f67dc830
+1654227204155	Marionette	INFO	Listening on port 58409
+Read port: 58409
+1654227204217	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+1654227383047	Marionette	INFO	Stopped listening on port 58409
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "58551" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileidTKls"
+1654227325407	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileidTKls\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58551/devtools/browser/f58ddb77-679f-4756-ae0c-f1d086ef4044
+1654227326689	Marionette	INFO	Listening on port 58573
+Read port: 58573
+1654227326803	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654227389716	geckodriver	INFO	Listening on 127.0.0.1:58719
+1654227392751	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58720" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileVm14Vw"
+1654227393007	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileVm14Vw\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58720/devtools/browser/496d3d43-835f-465b-95b1-eceb7af7696c
+1654227394216	Marionette	INFO	Listening on port 58741
+Read port: 58741
+1654227394308	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+1654227399779	Marionette	INFO	Stopped listening on port 58741
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
 

@@ -94,7 +94,7 @@ class Manager:
 
         post = RedditPost(driver)
         self.currentTitle = sanitize(post.getTitle())
-        texts = [sanitize(post.getTitle())] + sanitize(post.getCommentsFullText(limit))
+        texts = [sanitize(post.getTitle())] + sanitizeList(post.getCommentsFullText(limit))
         post.screenShotTitle()
         post.screenShotOfComments(limit)
         post.screenShotAwards()

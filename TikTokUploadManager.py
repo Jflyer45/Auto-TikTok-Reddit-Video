@@ -1,4 +1,5 @@
 from importlib.resources import path
+from pickle import FALSE
 from random import random
 from time import sleep
 from selenium import webdriver
@@ -62,7 +63,7 @@ class UploadManager:
             sleep(5)
             times += 1
 
-    def uploadVideo(self, videoPath, caption):
+    def uploadVideo(self, videoPath, caption, DONOTPOST=False):
         option = webdriver.ChromeOptions()
         option.add_argument("--profile-directory=Default")
         option.add_argument("--user-data-dir=C:\\Users\\Jeremy\\AppData\\Local\\Google\\Chrome\\User Data")
@@ -79,7 +80,8 @@ class UploadManager:
         self.typeCaption(caption)
         self.selectFile(videoPath)
         self.waitTillDoneUploading()
-        self.clickPost()
+        if not DONOTPOST:
+            self.clickPost()
         sleep(5)
 
 # option = webdriver.ChromeOptions()

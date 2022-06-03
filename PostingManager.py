@@ -26,15 +26,15 @@ def TopOfLinkGetter(subreddit, TopEnum=TopOfEnum().Today):
         link = getTopOfTodayLinks(subreddit)[0]
     return link
 
-def createAndPost(link):    
+def createAndPost(link, commentsMode=False, limit=5, DONOTPOST=False):    
     # Create video
     m = Manager()
-    m.createTikTok(link)
+    m.createTikTok(link, commentsMode=commentsMode, limit=limit)
     absolutePath = os.path.abspath(m.currentVideoPath)
 
     # Upload Video
     um = UploadManager()
-    um.uploadVideo(absolutePath, f"{m.currentTitle} #Reddit #{m.subReddit}")
+    um.uploadVideo(absolutePath, f"{m.currentTitle} #Reddit #{m.subReddit} #jeremyreddit", DONOTPOST=DONOTPOST)
 
     # Once uploaded move video to posted folder
     m.moveToPosted()
