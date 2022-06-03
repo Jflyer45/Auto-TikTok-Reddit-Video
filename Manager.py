@@ -238,7 +238,6 @@ class Manager:
         self.removeFile("combinedAudio.mp3")
         self.removeFile("Award.png")
         self.removeFile("Upvotes.png")
-        self.removeFile(os.path.expanduser("~") + "\\Downloads\\narration.mp3")
         for path in imagesPaths:
             self.removeFile(path)
         for path in audioPaths:
