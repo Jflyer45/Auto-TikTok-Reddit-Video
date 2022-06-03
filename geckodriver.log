@@ -951,3 +951,36 @@ JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Pha
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1654225140166	geckodriver	INFO	Listening on 127.0.0.1:61939
+1654225143218	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "61940" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileiq6pMp"
+*** You are running in headless mode.
+1654225143563	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileiq6pMp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61940/devtools/browser/fb6ce17e-ed10-4273-b34f-5f837cb2dbd3
+1654225144414	Marionette	INFO	Listening on port 61965
+Read port: 61965
+1654225144442	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654225189320	geckodriver	INFO	Listening on 127.0.0.1:62046
+1654225192368	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62047" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7wa2vg"
+*** You are running in headless mode.
+1654225192615	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7wa2vg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62047/devtools/browser/3104cde7-cc85-4c73-8650-7f7a5c21c00d
+1654225193562	Marionette	INFO	Listening on port 62069
+Read port: 62069
+1654225193588	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+1654225198247	Marionette	INFO	Stopped listening on port 62069
+
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\Jeremy\AppData\Local\Temp\rust_mozprofile7wa2vg\protections.sqlite
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

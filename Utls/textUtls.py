@@ -13,3 +13,4 @@ def sanitizeList(textList):
     sanList = []
     for text in textList:
         sanList.append(sanitize(text))
+    return sanList

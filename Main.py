@@ -17,7 +17,7 @@ Manager().createTikTok("https://www.reddit.com/r/TrueOffMyChest/comments/v3gs5i/
 # https://www.reddit.com/r/AskReddit/comments/uxbh5a/what_were_the_conspiracy_theorists_right_about/
 
 # Short
-"https://www.reddit.com/r/TrueOffMyChest/comments/v3gs5i/i_paid_off_my_credit_cards/"
+# "https://www.reddit.com/r/TrueOffMyChest/comments/v3gs5i/i_paid_off_my_credit_cards/"
 
 # createAndPost("AmItheAsshole", TopOfEnum().AllTime)
 
