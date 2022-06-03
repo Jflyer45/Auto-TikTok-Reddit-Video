@@ -8,7 +8,7 @@ import sys
 import subprocess
 from tempfile import gettempdir
 
-def textToSpeech(text, fileName, voice="Matthew"):
+def textToSpeech(text, fileName, voice="Matthew", ssmlMode=False):
     # Create a client using the credentials and region defined in the [adminuser]
     # section of the AWS credentials file (~/.aws/credentials).
     session = Session(profile_name="default")
@@ -16,8 +16,12 @@ def textToSpeech(text, fileName, voice="Matthew"):
 
     try:
         # Request speech synthesis
-        response = polly.synthesize_speech(Text=text, OutputFormat="mp3",
+        if ssmlMode:
+            response = polly.synthesize_speech(Text=text, OutputFormat="mp3",
                                             VoiceId=voice, TextType="ssml")
+        else:
+            response = polly.synthesize_speech(Text=text, OutputFormat="mp3",
+                                            VoiceId=voice)
     except (BotoCoreError, ClientError) as error:
         # The service returned an error, exit gracefully
         print(error)

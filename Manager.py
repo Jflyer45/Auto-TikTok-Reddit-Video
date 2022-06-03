@@ -113,12 +113,12 @@ class Manager:
         return texts, imagePaths
 
     # Where texts is a [] of strings, then gets audios
-    def textToSpeech(self, texts):
+    def textToSpeech(self, texts, ssmlMode=False):
         audioPaths = []
         i = 1
         for text in texts:
             fileName = f"audio{i}.mp3"
-            textToSpeech(text, fileName)
+            textToSpeech(text, fileName, ssmlMode=ssmlMode)
             audioPaths.append(fileName)
             self.audioPaths.append(fileName)
             i += 1
@@ -195,7 +195,11 @@ class Manager:
                 texts, imagePaths = self.getRedditStory(link)
             
             print("Collecting Audios...")
-            audioPaths = self.textToSpeech(texts)
+            if commentsMode:
+                audioPaths = self.textToSpeech(texts, ssmlMode=True)
+            else:
+                audioPaths = self.textToSpeech(texts, ssmlMode=False)
+
 
             print("Creating video")
             self.currentVideoPath = self.createVideo(imagePaths, audioPaths, self.currentTitle, maxLength)
