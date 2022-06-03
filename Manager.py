@@ -180,6 +180,7 @@ class Manager:
         self.currentVideoFilename = f"{sanitize(fileName)}.mp4"
 
         videoclip.write_videofile(finalPath, threads=10)
+        videoclip.close()
         audioclip.close()
         new_audioclip.close()
         return finalPath
