@@ -4,12 +4,12 @@ import os, random
 from Webscrapping.RedditPost import RedditPost
 from moviepy.editor import *
 from Utls.Picture import Picture
-from sanitize_filename import sanitize
+from sanitize_filename import sanitize as fileSanitize
 from PIL import Image
 import shutil
 from AWS import textToSpeech
 from Webscrapping.SeleniumUtls import *
-
+from Utls.textUtls import *
 
 class Manager:
     def __init__(self):  
@@ -42,7 +42,7 @@ class Manager:
     # This gets the texts and images
     def getRedditStory(self, link):
         #TODO move images to image folder
-        driver = self.getHeadlessDriverFireFox()
+        driver = getHeadlessDriverFireFox()
         driver.get(link)
 
         self.subReddit = self.getSubredditFromLink(link)
@@ -56,8 +56,8 @@ class Manager:
                 driver.find_element_by_xpath(xpath2).click()
 
         post = RedditPost(driver)
-        self.currentTitle = post.getTitle()
-        texts = [post.getTitle()] + post.getParagraphs()
+        self.currentTitle = sanitize(post.getTitle())
+        texts = [sanitize(post.getTitle())] + sanitizeList(post.getParagraphs())
         post.screenShotTitle()
         post.screenShotOfParagraphs()
         post.screenShotAwards()
@@ -93,8 +93,8 @@ class Manager:
                 driver.find_element_by_xpath(xpath2).click()
 
         post = RedditPost(driver)
-        self.currentTitle = post.getTitle()
-        texts = [post.getTitle()] + post.getCommentsFullText(limit)
+        self.currentTitle = sanitize(post.getTitle())
+        texts = [sanitize(post.getTitle())] + sanitize(post.getCommentsFullText(limit))
         post.screenShotTitle()
         post.screenShotOfComments(limit)
         post.screenShotAwards()
@@ -176,8 +176,8 @@ class Manager:
         videoclip.audio = new_audioclip
         print(f"Final audio length: {new_audioclip.duration}")
 
-        finalPath = self.finalVideosPATH + "\\" + f"{sanitize(fileName)}.mp4"
-        self.currentVideoFilename = f"{sanitize(fileName)}.mp4"
+        finalPath = self.finalVideosPATH + "\\" + f"{fileSanitize(fileName)}.mp4"
+        self.currentVideoFilename = f"{fileSanitize(fileName)}.mp4"
 
         videoclip.write_videofile(finalPath, threads=10)
         videoclip.close()
@@ -221,6 +221,7 @@ class Manager:
         final_clip.write_audiofile(output_path)
         for clip in clips:
             clip.close()
+        final_clip.close()
 
     def removeFile(self, filePath):
         if os.path.exists(filePath):

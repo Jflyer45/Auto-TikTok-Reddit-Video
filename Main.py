@@ -11,10 +11,13 @@ from Manager import Manager
 subredditList = ["TruthOffMyChest", "AmItheAsshole"]
 subredditVideoTypeDic = {"TruthOffMyChest": "TP", "AmItheAsshole": "TP", "AskReddit": "TC"}
 
-Manager().createTikTok("https://www.reddit.com/r/AskReddit/comments/v2tebh/have_you_ever_been_scared_to_the_core_of_your/", True, maxLength=90)
+Manager().createTikTok("https://www.reddit.com/r/TrueOffMyChest/comments/v3gs5i/i_paid_off_my_credit_cards/", False, maxLength=90)
 
 # NSFW
 # https://www.reddit.com/r/AskReddit/comments/uxbh5a/what_were_the_conspiracy_theorists_right_about/
+
+# Short
+"https://www.reddit.com/r/TrueOffMyChest/comments/v3gs5i/i_paid_off_my_credit_cards/"
 
 # createAndPost("AmItheAsshole", TopOfEnum().AllTime)
 

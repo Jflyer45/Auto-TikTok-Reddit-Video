@@ -910,3 +910,44 @@ JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cf
 
 ###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
 
+1654223694202	geckodriver	INFO	Listening on 127.0.0.1:49391
+1654223697249	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49392" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileXo4IRk"
+1654223697674	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileXo4IRk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49392/devtools/browser/f3634956-c603-498c-8a12-d72b85c96a68
+1654223699527	Marionette	INFO	Listening on port 49416
+Read port: 49416
+1654223699606	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654223706523	Marionette	INFO	Stopped listening on port 49416
+1654223822141	geckodriver	INFO	Listening on 127.0.0.1:49604
+1654223825196	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49605" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileAdTP7V"
+1654223825647	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileAdTP7V\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49605/devtools/browser/7575e1aa-3580-421b-a932-9a320c3cfa26
+1654223827457	Marionette	INFO	Listening on port 49628
+Read port: 49628
+1654223827509	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+1654223833586	Marionette	INFO	Stopped listening on port 49628
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 56: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+1654224133657	geckodriver	INFO	Listening on 127.0.0.1:49775
+1654224136714	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "49776" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileZvo7xG"
+*** You are running in headless mode.
+1654224137062	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileZvo7xG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49776/devtools/browser/562ea0f4-6202-4540-8f09-98946481f1c7
+1654224137778	Marionette	INFO	Listening on port 49795
+Read port: 49795
+1654224137837	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654224144122	Marionette	INFO	Stopped listening on port 49795
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
