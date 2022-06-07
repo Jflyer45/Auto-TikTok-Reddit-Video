@@ -9,8 +9,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 class UploadManager:  
     def __init__(self):
-        self.loginInfo = ["jeremyreddit", "Deltafire2952#"]
-
         self.driver = None
         self.usernameBoxXPATH = "//input[@name='email']"
         self.passwordBoxXPATH = "//input[@type='password']"

@@ -1058,3 +1058,391 @@ console.error: services.settings:
 
 ###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
 
+1654229292623	geckodriver	INFO	Listening on 127.0.0.1:59072
+1654229295684	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59073" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileT32ucu"
+1654229296160	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileT32ucu\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:59073/devtools/browser/6a76b2ef-6ed1-4714-8a8a-54ffb7213297
+1654229297735	Marionette	INFO	Listening on port 59098
+Read port: 59098
+1654229297770	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654229302535	Marionette	INFO	Stopped listening on port 59098
+
+###!!! [Parent][PBackgroundParent] Error: RunMessage(msgname=PBackgroundIDBDatabase::Msg_Close) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654229330429	geckodriver	INFO	Listening on 127.0.0.1:59215
+1654229333460	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59216" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileicqDvC"
+1654229333973	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileicqDvC\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:59216/devtools/browser/3b840183-ce56-4885-8960-bce6e7772550
+1654229335581	Marionette	INFO	Listening on port 59241
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+Read port: 59241
+1654229335678	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+console.error: services.settings: 
+  security-state/intermediates Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  Message: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+
+1654229378604	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile74XZrV\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:59351/devtools/browser/66726c56-ccae-483f-86a5-622d920b28ab
+1654229379484	Marionette	INFO	Listening on port 59372
+Read port: 59372
+1654229379529	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654229385514	Marionette	INFO	Stopped listening on port 59372
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654229851046	geckodriver	INFO	Listening on 127.0.0.1:59631
+1654230015383	geckodriver	INFO	Listening on 127.0.0.1:59879
+1654230018433	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59880" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileAEE8jz"
+1654230018879	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileAEE8jz\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:59880/devtools/browser/53502b25-838a-4ed6-ba6a-e45e89147078
+1654230020123	Marionette	INFO	Listening on port 59901
+Read port: 59901
+1654230020197	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654230025800	Marionette	INFO	Stopped listening on port 59901
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654230283928	geckodriver	INFO	Listening on 127.0.0.1:60078
+1654230286971	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60079" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilezZO1dl"
+1654230287343	Marionette	INFO	Marionette enabled
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild.
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilezZO1dl\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+DevTools listening on ws://localhost:60079/devtools/browser/e5b03f8b-57af-4fb9-8f9c-a66281eedfe8
+1654230288237	Marionette	INFO	Listening on port 60100
+Read port: 60100
+1654230288307	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654230293189	Marionette	INFO	Stopped listening on port 60100
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654274921285	geckodriver	INFO	Listening on 127.0.0.1:65144
+1654274924325	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65145" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilezWBJZA"
+1654274924647	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilezWBJZA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65145/devtools/browser/7072d8bb-dacd-446f-b715-1e6ab3ef43a5
+1654274925888	Marionette	INFO	Listening on port 65167
+Read port: 65167
+1654274926007	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654274942843	Marionette	INFO	Stopped listening on port 65167
+1654305415171	geckodriver	INFO	Listening on 127.0.0.1:63003
+1654305418232	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63004" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilekPyiw5"
+1654305418536	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilekPyiw5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63004/devtools/browser/376dda71-7c5a-4ee7-9125-e79c5f596553
+1654305419741	Marionette	INFO	Listening on port 63026
+Read port: 63026
+1654305419797	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654305424112	Marionette	INFO	Stopped listening on port 63026
+[Parent 13172, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1654309735212	geckodriver	INFO	Listening on 127.0.0.1:49879
+1654309738252	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49880" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilejsbRAG"
+1654309738501	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilejsbRAG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49880/devtools/browser/abaa438c-72b3-41cd-ac94-c1f6aa3f3ee9
+1654309739672	Marionette	INFO	Listening on port 49901
+Read port: 49901
+1654309739706	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654309751881	Marionette	INFO	Stopped listening on port 49901
+1654371362492	geckodriver	INFO	Listening on 127.0.0.1:52433
+1654371365540	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52434" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilegNHleO"
+1654371365846	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilegNHleO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:52434/devtools/browser/772b2a9e-ce22-4864-bbd2-b8535c3afba2
+1654371367126	Marionette	INFO	Listening on port 52455
+Read port: 52455
+1654371367207	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+1654371372758	Marionette	INFO	Stopped listening on port 52455
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654409606813	geckodriver	INFO	Listening on 127.0.0.1:55462
+1654409609861	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55463" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileXn6fL2"
+1654409610079	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileXn6fL2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55463/devtools/browser/72cbd941-0562-4a80-a590-77a4bebb1969
+1654409611233	Marionette	INFO	Listening on port 55484
+Read port: 55484
+1654409611298	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654409902349	geckodriver	INFO	Listening on 127.0.0.1:55589
+1654409905374	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55590" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilepCUsOF"
+1654409905598	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilepCUsOF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55590/devtools/browser/7e588442-75b7-48ff-be00-f3654e19604b
+1654409906789	Marionette	INFO	Listening on port 55612
+Read port: 55612
+1654409906805	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654409938248	Marionette	INFO	Stopped listening on port 55612
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654409974191	geckodriver	INFO	Listening on 127.0.0.1:55688
+1654409977250	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55689" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileCnyC7x"
+1654409977451	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileCnyC7x\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55689/devtools/browser/a953ce84-4115-4c42-9575-bdbaf9675428
+1654409978553	Marionette	INFO	Listening on port 55710
+Read port: 55710
+1654409978674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654409998624	Marionette	INFO	Stopped listening on port 55710
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654410059399	geckodriver	INFO	Listening on 127.0.0.1:55799
+1654410062443	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55800" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileVgIlCZ"
+1654410062645	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileVgIlCZ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55800/devtools/browser/1ecaded9-86e3-451d-8f50-ba0ce9cb6038
+1654410063728	Marionette	INFO	Listening on port 55823
+Read port: 55823
+1654410063766	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654410085339	Marionette	INFO	Stopped listening on port 55823
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PWebSocket::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+1654410114870	geckodriver	INFO	Listening on 127.0.0.1:55905
+1654410117896	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55906" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofiled2yHP4"
+1654410118097	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofiled2yHP4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55906/devtools/browser/e0f33fb2-abb5-4afa-ac17-b8cb9dc71e53
+1654410119199	Marionette	INFO	Listening on port 55926
+Read port: 55926
+1654410119226	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654410135327	Marionette	INFO	Stopped listening on port 55926
+1654410207482	geckodriver	INFO	Listening on 127.0.0.1:56016
+1654410210526	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56017" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7uu3pp"
+1654410210727	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile7uu3pp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56017/devtools/browser/6e64f734-5d12-497c-8ea4-3b5d1e0025bc
+1654410211852	Marionette	INFO	Listening on port 56038
+Read port: 56038
+1654410211954	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654410223869	Marionette	INFO	Stopped listening on port 56038
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654410295935	geckodriver	INFO	Listening on 127.0.0.1:56137
+1654410298950	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56138" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileq2ZW8F"
+1654410299149	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileq2ZW8F\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56138/devtools/browser/ea0d308f-f897-41b6-a31b-bd45f693f307
+1654410300276	Marionette	INFO	Listening on port 56158
+Read port: 56158
+1654410300385	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654410305113	Marionette	INFO	Stopped listening on port 56158
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654444857113	geckodriver	INFO	Listening on 127.0.0.1:56310
+1654444860137	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56311" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofiledcUlLN"
+1654444860442	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofiledcUlLN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56311/devtools/browser/233d097e-626e-435a-be77-52a6ab9c9e3a
+1654444861644	Marionette	INFO	Listening on port 56337
+Read port: 56337
+1654444861696	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654444868024	Marionette	INFO	Stopped listening on port 56337
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654535295777	geckodriver	INFO	Listening on 127.0.0.1:55885
+1654535298822	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55886" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile3mVnGG"
+1654535299161	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofile3mVnGG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55886/devtools/browser/1268594a-06f2-4451-aee6-1ae9d94b4f7e
+1654535300465	Marionette	INFO	Listening on port 55917
+Read port: 55917
+1654535300501	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654535306264	Marionette	INFO	Stopped listening on port 55917
+1654535703571	geckodriver	INFO	Listening on 127.0.0.1:56079
+1654535706613	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56080" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilehXvFE4"
+1654535706848	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilehXvFE4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56080/devtools/browser/52aaf8fd-8a6d-433a-b568-a79ff280af54
+1654535708021	Marionette	INFO	Listening on port 56103
+Read port: 56103
+1654535708060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654535720541	Marionette	INFO	Stopped listening on port 56103
+[Parent 18476, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654536519493	geckodriver	INFO	Listening on 127.0.0.1:60853
+1654536522525	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60854" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilelvHFw7"
+1654536522737	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofilelvHFw7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60854/devtools/browser/70e80e92-e731-4c85-9516-8fdadda9617a
+1654536523855	Marionette	INFO	Listening on port 60874
+Read port: 60874
+1654536523975	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654536534094	Marionette	INFO	Stopped listening on port 60874
+1654536814986	geckodriver	INFO	Listening on 127.0.0.1:60974
+1654536818015	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60975" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileSXU31K"
+1654536818231	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileSXU31K\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60975/devtools/browser/31d799d5-33f7-4d0c-a892-32c2d33b19d1
+1654536819321	Marionette	INFO	Listening on port 60995
+Read port: 60995
+1654536819358	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654536829673	Marionette	INFO	Stopped listening on port 60995
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654537485703	geckodriver	INFO	Listening on 127.0.0.1:61142
+1654537488726	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61143" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileML04yM"
+1654537488945	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileML04yM\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61143/devtools/browser/124a15d5-ab4d-4d78-9cef-79bf14cab0b3
+1654537490080	Marionette	INFO	Listening on port 61163
+Read port: 61163
+1654537490178	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654537495816	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654537501161	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
+TimedPromise@chrome://remote/content/marionette/sync.js:220:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1654537501740	Marionette	INFO	Stopped listening on port 61163
+1654540673681	geckodriver	INFO	Listening on 127.0.0.1:61544
+1654540676719	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61545" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileZvzfbW"
+1654540676959	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileZvzfbW\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61545/devtools/browser/672fac2a-7f3c-4ec9-acca-2b97cc983ad1
+1654540678229	Marionette	INFO	Listening on port 61568
+Read port: 61568
+1654540678278	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654540689663	Marionette	INFO	Stopped listening on port 61568
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1654540797788	geckodriver	INFO	Listening on 127.0.0.1:61663
+1654540800816	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61664" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileK5Txt8"
+1654540801034	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileK5Txt8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61664/devtools/browser/41b0f4f7-2a94-4ffe-a37a-9ed3f3ad4ff0
+1654540802152	Marionette	INFO	Listening on port 61684
+Read port: 61684
+1654540802267	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/quicksuggest Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+console.error: services.settings: 
+  main/query-stripping Signature failed  [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no]
+JavaScript warning: https://www.redditstatic.com/accountmanager/ssoOneTap.6547cfda802352c7beac.js, line 1: unreachable code after return statement
+1654540836066	Marionette	INFO	Stopped listening on port 61684
+1654549345543	geckodriver	INFO	Listening on 127.0.0.1:62436
+1654549348554	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "62437" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileKxWvd0"
+*** You are running in headless mode.
+1654549348796	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Jeremy\\AppData\\Local\\Temp\\rust_mozprofileKxWvd0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:62437/devtools/browser/f612cb18-9a68-4eb6-898e-9c653e96525b
+1654549349535	Marionette	INFO	Listening on port 62460
+Read port: 62460
+1654549349656	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654549354460	Marionette	INFO	Stopped listening on port 62460
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

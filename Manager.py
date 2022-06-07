@@ -93,8 +93,10 @@ class Manager:
                 driver.find_element_by_xpath(xpath2).click()
 
         post = RedditPost(driver)
+
         self.currentTitle = sanitize(post.getTitle())
         texts = [sanitize(post.getTitle())] + sanitizeList(post.getCommentsFullText(limit))
+
         post.screenShotTitle()
         post.screenShotOfComments(limit)
         post.screenShotAwards()
@@ -103,12 +105,23 @@ class Manager:
         
         texts = addPause(texts)
 
+        automod = False
+        names = post.getUsernames()
+        if "automoderator" in names[0].lower():
+            texts.pop(1)
+            automod = True
+            os.remove("Comment1.png")
+
         driver.close()
         imagePaths = []
         imagePaths.append("Title.png")
         for i in range(1, len(texts)):
-            imagePaths.append(f"Comment{i}.png")
-            self.ImagePaths.append(f"Comment{i}.png")
+            if automod:
+                imagePaths.append(f"Comment{i+1}.png")
+                self.ImagePaths.append(f"Comment{i+1}.png")
+            else:
+                imagePaths.append(f"Comment{i}.png")
+                self.ImagePaths.append(f"Comment{i}.png")
             i += 1
         return texts, imagePaths
 

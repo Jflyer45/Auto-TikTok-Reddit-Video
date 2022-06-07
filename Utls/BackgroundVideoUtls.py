@@ -14,4 +14,4 @@ def chopIntoSegments(videoPath, segLength, fileName):
         currentTime += segLength
     print("Clips complete")
 
-chopIntoSegments("Utls/test.mp4", 180, "clip")
+chopIntoSegments("Utls/finalMinecraft.mp4", 180, "clip")
